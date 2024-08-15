@@ -67,11 +67,6 @@ function sortearNumeros(qtdNumeros, minimo, maximo) {
         numerosDisponiveis_6x6.push(i);
     }
 
-    // Verifica se há números suficientes disponíveis para sortear
-    // if (qtdNumeros > numerosDisponiveis_3x3.length) {
-    //     console.log("Não há números suficientes disponíveis para sortear.");
-    //     return;
-    // }
 
     // Array para armazenar os números sorteados
     var numerosSorteados_3x3 = [];
@@ -107,8 +102,7 @@ var numerosSorteados_4x4 = sortearNumeros(15, 1, 15);
 var numerosSorteados_5x5 = sortearNumeros(24, 1, 24);
 
 var numerosSorteados_6x6 = sortearNumeros(35, 1, 35);
-console.log(numerosSorteados_6x6)
-console.log(array_6x6)
+
 // Fim da criação de numeros
 
 // Adicionando o numero no array necessario para o jogo inicial em posições aleatorias
