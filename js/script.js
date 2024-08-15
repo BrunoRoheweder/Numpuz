@@ -1,3 +1,14 @@
+// Verificando se e um dispositivo movel ou desktop
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    if (window.innerWidth <= 768) {
+        
+    }     
+}
+
+
+
+
+// linkando o js
 function puz3(){
     window.location.href = "./pages/3x3.html";
 }
