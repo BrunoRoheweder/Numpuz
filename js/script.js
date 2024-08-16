@@ -1,13 +1,27 @@
 // Verificando se e um dispositivo movel ou desktop
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-    if (window.innerWidth <= 768) {
-        
-    }     
+
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
 }
 
+if (isMobileDevice()) {
+    // Código para dispositivos móveis
+    
+    var mobile = document.getElementById('mobile');
+    var black = document.getElementById('black');
 
-
-
+    // Verifica qual folha de estilo está ativa e troca para a outra
+    if (mobile.disabled) {
+        mobile.disabled = false;
+        black.disabled = true;
+    } else {
+        mobile.disabled = true;
+        black.disabled = false;
+    }
+    
+    // document.body.classList.add("mobile");
+} else {
+    
 // linkando o js
 function puz3(){
     window.location.href = "./pages/3x3.html";
@@ -840,3 +854,7 @@ function pronto() {
 function recarregar() {
     location.reload();
 };
+
+}
+
+

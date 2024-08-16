@@ -1,22 +1,17 @@
-/* Estilos para telas menores, como celulares */
-@media only screen and (max-width: 768px) {
-    body {
-        background-color: lightblue;
-    }
-}
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
 }
 
-.html {
+/* Estilos base */
+html {
     background-color: black;
 }
 
-.body {
+body {
     width: 100%;
-    height: 600px;
+    height: 100%;
 }
 
 :root {
@@ -27,59 +22,41 @@
 }
 
 .container-table {
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; */
-    display: flex;
+    height: 100vh;
     flex-direction: column;
 }
 
 /* TABULEIRO */
 
-.table-3x3 {
-    /* height: 345px; */
-    width: 348px;
+.table-3x3, .table-4x4, .table-5x5, .table-6x6 {
     background-color: var(--background-color-black);
     border: 2px var(--background-color-white) solid;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.table-3x3 {
+    width: 348px;
 }
 
 .table-4x4 {
-    /* height: 471px; */
     width: 464px;
-    background-color: var(--background-color-black);
-    border: 2px var(--background-color-white) solid;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .table-5x5 {
-    /* height: 790px; */
     width: 580px;
-    background-color: var(--background-color-black);
-    border: 2px var(--background-color-white) solid;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .table-6x6 {
-    /* height: 400px; */
     width: 696px;
-    background-color: var(--background-color-black);
-    border: 2px var(--background-color-white) solid;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 /* QUADRADOS */
-
-.quadrado {
+.quadrado, .quadrado0 {
     width: 110px;
     height: 110px;
     background-color: var(--background-color-trans);
@@ -89,35 +66,16 @@
     color: var(--color);
     cursor: pointer;
 }
-
-.quadrado0 {
-    width: 110px;
-    height: 110px;
-    background-color: var(--background-color-trans);
-    text-align: center;
-    font-size: 5rem;
-    border: 3px var(--background-color-white) solid;
-    color: var(--color);
-    cursor: pointer;
-}
-
 
 /* BOTÕES */
 
-.quadrado button {
-    height: auto;
-    width: auto;
-    font-size: 8rem;
-}
-
-.quadrado0 button {
+.quadrado button, .quadrado0 button {
     height: auto;
     width: auto;
     font-size: 8rem;
     background-color: var(--background-color-trans);
     border-color: transparent;
 }
-
 
 button {
     height: 40px;
@@ -172,4 +130,43 @@ button {
 
 .botoes {
     margin-top: 1.5rem;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .container-table, .container-menu {
+        height: auto;
+        padding: 20px;
+    }
+
+    .table-3x3, .table-4x4, .table-5x5, .table-6x6 {
+        width: 100%;
+        max-width: 90vw;
+    }
+
+    .quadrado, .quadrado0 {
+        width: 28vw;
+        height: 28vw;
+        font-size: 4vw;
+    }
+
+    .quadrado button, .quadrado0 button {
+        font-size: 5vw;
+    }
+
+    .menu {
+        width: 90vw;
+        height: auto;
+    }
+
+    .menu h2 {
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    .menu-botao button {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+    }
 }
